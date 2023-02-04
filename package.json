@@ -1,5 +1,5 @@
 {
-  "name": "binance",
+  "name": "@legik/binance",
   "version": "2.2.5",
   "description": "Node.js connector for Binance's REST APIs and WebSockets, with TypeScript & integration tests.",
   "main": "lib/index.js",
@@ -18,6 +18,9 @@
     "pack": "webpack --config webpack/webpack.config.js",
     "prepublishOnly": "npm run build:clean",
     "betapublish": "npm publish --tag beta"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "Tiago Siebler (https://github.com/tiagosiebler)",
   "contributors": [
