@@ -147,6 +147,11 @@ const BINANCE_BASE_URLS: Record<BinanceBaseUrlKey, string> = {
   // Vanilla Options
   voptions: 'https://vapi.binance.com',
   voptionstest: 'https://testnet.binanceops.com',
+
+
+  // Vanilla Options
+  eoptions: 'https://eapi.binance.com',
+  eoptionstest: 'https://testnet.binanceops.com',
 };
 
 export function getServerTimeEndpoint(urlKey: BinanceBaseUrlKey): string {
@@ -170,6 +175,10 @@ export function getServerTimeEndpoint(urlKey: BinanceBaseUrlKey): string {
     case 'voptions':
     case 'voptionstest':
       return 'vapi/v1/time';
+
+    case 'eoptions':
+    case 'eoptionstest':
+      return 'eapi/v1/time';
   }
 }
 

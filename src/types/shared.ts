@@ -18,7 +18,9 @@ export type BinanceBaseUrlKey =
   | 'coinm'
   | 'coinmtest'
   | 'voptions'
-  | 'voptionstest';
+  | 'voptionstest'
+  | 'eoptions'
+  | 'eoptionstest';
 
 /**
  * Time in force. Note: `GTE_GTC` is not officially documented, use at your own risk.
@@ -165,13 +167,15 @@ export interface RecentTradesParams {
 }
 
 export interface CancelOrderParams {
-  symbol: string;
+  symbol?: string;
   orderId?: number;
   origClientOrderId?: string;
+  clientOrderId?: string;
   /** For isolated margin trading only */
   newClientOrderId?: string;
   /** For isolated margin trading only */
   isIsolated?: StringBoolean;
+  timestamp?: string
 }
 
 export interface CancelOCOParams {

@@ -101,6 +101,7 @@ export default class Beautifier {
       'stepSize',
       'stopPrice',
       'storage',
+      'strikePrice',
       'takerBaseAssetVolume',
       'takerCommission',
       'takerQuoteAssetVolume',
